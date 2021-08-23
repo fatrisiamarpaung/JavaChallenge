@@ -11,10 +11,10 @@ public class SwapNumber {
         input2=scan.nextInt();
 
         int result[] = Swap(input1,input2);
-        System.out.println("Input 1: before "+input1+", after "+result[0]);
-        System.out.println("Input 2: before "+input2+", after "+result[1]);
-
+        System.out.println("Input 1: before " + input1 + ", after " + result[0]);
+        System.out.println("Input 2: before " + input2 + ", after " + result[1]);
     }
+
 
     public static int[] Swap(int number1, int number2){
         int temp;
@@ -24,7 +24,5 @@ public class SwapNumber {
         number2=temp;
 
         return new int[] {number1, number2};
-
-
     }
 }
