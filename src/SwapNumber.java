@@ -17,11 +17,9 @@ public class SwapNumber {
 
 
     public static int[] Swap(int number1, int number2){
-        int temp;
-
-        temp=number1;
-        number1=number2;
-        number2=temp;
+        number1 = number1+number2;
+        number2 = number1-number2;
+        number1 = number1-number2;
 
         return new int[] {number1, number2};
     }
