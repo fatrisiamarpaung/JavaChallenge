@@ -2,34 +2,30 @@ import java.util.Scanner;
 
 public class Palindrome {
     public static void main(String[] args) {
-        String word = "", hasil;
+        String word = "";
 
         Scanner scan = new Scanner(System.in);
         System.out.print("Input: ");
         word = scan.nextLine();
 
-        hasil = Check(word);
-
-        if (word.equals(hasil)){
-            System.out.println(hasil+ " is Palindrome");
-        } else if (!word.equals(hasil)){
-            System.out.println(hasil+" is not Palindrome");
-        }
+        isPalindrome(word);
     }
 
+    static void isPalindrome(String word){
 
-    static String Check(String word){
-        int jumlah, jumlahHuruf;
-        String result = "";
+        int wordLength;
+        String wordReversed = "";
 
-       jumlah = word.length();
-       jumlahHuruf = jumlah-1;
-
-        for (int i = 0; i < jumlah; i++) {
-        result = result + word.charAt(jumlahHuruf);
-        jumlahHuruf--;
+        wordLength = word.length()-1;
+        for (int i = 1; i <= word.length(); i++) {
+            wordReversed = wordReversed + word.charAt(wordLength);
+            wordLength--;
         }
 
-        return result;
+        if (word.equals(wordReversed)){
+            System.out.println(word+ " is Palindrome");
+        } else if (!word.equals(wordReversed)){
+            System.out.println(word+" is not Palindrome");
+        }
     }
 }
